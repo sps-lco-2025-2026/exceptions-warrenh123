@@ -30,7 +30,7 @@ catch(InventoryException)
     Console.WriteLine("General error ocurred");
 }
 
-
+//second block to see if there are enough requested items in inventory
 try
 {
     int numberRequested = int.Parse(Console.ReadLine());
@@ -65,18 +65,10 @@ public class InventoryException : Exception
 
 public class ItemNotFoundException : InventoryException
 {
-    public ItemNotFoundException(string item): base($"Cannot withdraw there is no {item} in inventory.")
-    {
-        
-    }
+    public ItemNotFoundException(string item): base($"Cannot withdraw there is no {item} in inventory.") { }
 }
 
 public class InsufficientQuantityException : InventoryException
 {
-    public InsufficientQuantityException(string item): base($"There aren't enough {item}s in inventory.")
-    {
-        
-    }
-    
+    public InsufficientQuantityException(string item): base($"There aren't enough {item}s in inventory.") { }
 }
-
