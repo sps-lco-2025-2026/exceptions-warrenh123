@@ -1,0 +1,8 @@
+1. Because it is a type of InventoryException, and they may share similar properties or methods
+so it is easier to have it as a derived class.
+2. Yes you cna catch the parent class which is InventoryException.
+3. When it doesn't fall into any of the specific categories of exceptions and catches an error
+you don't expect to occur.
+4. Message so you can pass in a message, inner so you can pass in the excpetion that caused the 
+current exception.
+5. When we want to see the error but we don't want to deal with the issue.
